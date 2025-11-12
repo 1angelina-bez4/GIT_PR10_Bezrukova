@@ -1,0 +1,12 @@
+name: Pr10_git_Bez
+on: push
+
+jobs:
+  Job1:
+      runs-on: windows-latest # среда выполнения
+      steps:
+          - name: Checkout
+            uses: actions/checkout@v5.0.0 #это версия конкретно выбранного actions
+          
+          - name: Step2
+            run: dotnet run #Запуск 
