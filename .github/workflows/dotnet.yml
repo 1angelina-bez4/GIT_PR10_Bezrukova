@@ -6,7 +6,12 @@ jobs:
       runs-on: windows-latest # среда выполнения
       steps:
           - name: Checkout
-            uses: actions/checkout@v5.0.0 #это версия конкретно выбранного actions
+            uses: actions/checkout@v4 #это версия конкретно выбранного actions
           
           - name: Step2
-            run: dotnet run #Запуск 
+            uses: actions/setup-dotnet@v3 #делает команду dotnet доступной.
+            with:
+              dotnet-version: '8.x' #версия .net
+
+          - name: Run project
+            run: dotnet run --project ./Pr10_bez.csproj #Запуск проекта
