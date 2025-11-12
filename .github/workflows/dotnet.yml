@@ -14,4 +14,4 @@ jobs:
               dotnet-version: '8.x' #версия .net
 
           - name: Run project
-            run: dotnet run --project ./Pr10_bez.csproj #Запуск проекта
+            run: dotnet run --project ./Pr10_bez/Pr10_bez.csproj #Запуск проекта
